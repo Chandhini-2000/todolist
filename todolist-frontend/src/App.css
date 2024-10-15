@@ -1,0 +1,108 @@
+/* Apply background only to the body to avoid overlap issues */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Ensure no padding */
+  min-height: 100vh; /* Make sure the background covers the full viewport */
+  background-image: url('https://wallpapers.com/images/hd/professional-background-sfjuyc5zs4mum6fh.jpg');
+  background-size: cover; /* Cover the entire area */
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Arial", sans-serif; /* Ensure readable text */
+}
+
+/* Center the main content without extra containers */
+.app {
+  text-align: center;
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 20px;
+ 
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* TaskForm.css */
+
+.task-form input,
+.task-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif; /* Consistent font for inputs */
+  font-size: 16px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Hover effect for input and textarea fields */
+.task-form input:hover,
+.task-form textarea:hover {
+  border-color: #0077b6; /* Blue border on hover */
+  background-color: #f0f8ff; /* Light background color on hover */
+}
+
+.task-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif; /* Consistent font */
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for button */
+.task-form button:hover {
+  background-color:gray;
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.task-list .task-item {
+  
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.task-list .task-item button {
+ 
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: xx-large;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for delete button */
+.task-list .task-item button:hover {
+ 
+  transform: scale(1.05); /* Zoom effect */
+}
+@media (max-width: 600px) {
+  .task-form {
+    flex-direction: column;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  .task-item {
+    text-align: left;
+  }
+
+  .app {
+    padding: 10px;
+  }
+}
